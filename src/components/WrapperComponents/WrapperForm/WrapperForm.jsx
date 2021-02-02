@@ -4,7 +4,7 @@ import { makeStyles } from '@material-ui/core/styles';
 const useStyles = makeStyles((theme) => {
   return {
     root: {
-      width:'100%',
+      width:'40%',
       marginTop: theme.spacing(1)
     }
   }
@@ -13,7 +13,7 @@ const useStyles = makeStyles((theme) => {
  * Компонент обертка 
  * noValidate // отключение стандартного повидения HTML валидатора  
  */
-export const Form = ({ children, ...props }) => {
+export const WrapprForm = ({ children, ...props }) => {
   const styles = useStyles()
 
   return (

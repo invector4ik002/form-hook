@@ -5,16 +5,16 @@ const DataContext = createContext();
 export const DataProvider = ({ children }) => {
 
   const [data, setData] = React.useState({});
-
-  const setValue = (values) => {
+  console.log(data)
+  const setValues = (values) => {
+    
     setData((prevData) => ({
       ...prevData,
-      ...values
+      ...values,
     }));
   };
-
   return (
-    <DataContext.Provider value={{data, setValue}}>
+    <DataContext.Provider value={{data, setValues}}>
       {children}
     </DataContext.Provider>
   );
