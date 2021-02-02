@@ -5,7 +5,6 @@ const DataContext = createContext();
 export const DataProvider = ({ children }) => {
 
   const [data, setData] = React.useState({});
-  console.log(data)
   const setValues = (values) => {
     
     setData((prevData) => ({

@@ -10,18 +10,17 @@ import { PrimoryButton } from '../PrimatyButton/PrimoryButton';
 import { useData } from '../../DataContext/DataContext';
 
 export const Step3 = () => {
+  const history = useHistory();
   const { data, setValues } = useData();
   const { control, handleSubmit } = useForm({
     defaultValues: {
       files:data.files
     },
   });
-  const history = useHistory();
 
   const onSubmit = (data) => {
     history.push('/result');
-    setValues(data)
-    console.log(data);
+    setValues(data);
   };
 
   return (

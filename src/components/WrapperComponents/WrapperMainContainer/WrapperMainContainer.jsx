@@ -4,6 +4,7 @@ import Container from '@material-ui/core/Container';
 
 const useStyles = makeStyles((theme) => ({
   root: {
+    width:'40%',
     marginTop: theme.spacing(4),
     display: 'flex',
     flexDirection: 'column',

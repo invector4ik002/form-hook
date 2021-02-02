@@ -23,7 +23,6 @@ export const Step1 = () => {
   const onSubmit = (data) => {
     history.push('/step2')
     setValues(data)
-    console.log(data);
   };
   /**
    * register - это будет наш реф
@@ -36,8 +35,6 @@ export const Step1 = () => {
     resolver: yupResolver(schema)
   });
   
- 
-
   return (
     <WrapperMainContainer>
       <Typography component='h2' variant='h5'>Step 1</Typography>

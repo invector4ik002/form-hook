@@ -10,7 +10,7 @@ const useStyles = makeStyles((theme) => {
   }
 });
 
-export const PrimoryButton = ({ children, props }) => {
+export const PrimoryButton = ({ children, onSubmit}) => {
   const styles = useStyles()
 
   return (
@@ -20,7 +20,7 @@ export const PrimoryButton = ({ children, props }) => {
       fullWidth 
       variant='contained' 
       color='primary' 
-      {...props}
+      onClick={onSubmit}
     >
       {children}
     </Button>

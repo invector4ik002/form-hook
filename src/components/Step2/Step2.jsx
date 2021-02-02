@@ -14,7 +14,6 @@ import parsePhoneNumberFromString from 'libphonenumber-js';
 
 const schema = yup.object().shape({
   email: yup.string().email('Введите корректный email').required('Поле обязательно к заполнению'),
-  // lastName: yup.string().matches(/^([^0-9]*)$/, 'Цифры не допустимы в фамилии').required('Поле обязательно к заполнению'),
 });
 const normalizePhoneNumber = (value) => {
   const phoneNumber = parsePhoneNumberFromString(value)
@@ -44,7 +43,6 @@ export const Step2 = () => {
   const onSubmit = (data) => {
     history.push('/step3');
     setValues(data);
-    console.log(data);
   };
 
   return (
